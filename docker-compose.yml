@@ -1,11 +1,13 @@
 web:
-  build: .
-  command: python app.py
-  ports:
-    - "5000:5000"
+  build: web 
   volumes:
-    - .:/code
+    - web:/code
+  ports:
+    - "80:5000"
   links:
     - redis
+  command: python app.py
 redis:
-  image: redis
+  image: redis:2.8.19
+  ports:
+    - "6379:6379"
