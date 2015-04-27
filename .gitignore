@@ -1,0 +1,7 @@
+*.py[cod]
+
+#virtualenv dir
+env/
+
+#IDE / Projects
+.ropeproject/
