@@ -4,7 +4,7 @@ FROM ubuntu:14.10
 # install dependecies
 RUN apt-get -y update
 RUN apt-get install -y python python-dev python-pip python-psycopg2
-RUN apt-get install -y nginx spervisor
+RUN apt-get install -y nginx supervisor
 
 # add requirements.txt and install
 ADD requirements.txt /code/requirements.txt
